@@ -20,9 +20,6 @@
      - unzip
      - vim
      - wget
-     - zip  
-     - composer
-     - htop
     state: present
     update_cache: yes
     cache_valid_time: 86400 #One day
@@ -62,37 +59,3 @@
     regexp: 'HISTFILESIZE=2000'
     line: 'HISTFILESIZE='
   tags: once
-
-#git@github.com:alupuleasa/vimrc.git
-#https://github.com/alupuleasa/vimrc.git
-
-#https://github.com/flazz/vim-colorschemes.git
-#git@github.com:alupuleasa/vimrc.git
-
-# - name: 4.Clone Vimrc
-#   git:
-#     repo: git@github.com:alupuleasa/vimrc.git
-#     version: master
-#     dest: /var/www/html/vimrc
-#     accept_hostkey: yes
-#   # ssh-agent doesn't allow key to pass through remote sudo commands.
-#   become: no
-#   notify:
-#     - move-vimrc
-
-# - name: 1.Change key permission
-#   become: true
-#   file: 
-#     path: /home/vagrant/.ssh/id_rsa
-#     mode: 0400
-
-# How to add .bashrc variable
-# export test="xxx"
-# sed -i 's/HISTSIZE=1000/HISTSIZE=/g' ~/.bashrc
-# sed -i 's/HISTFILESIZE=2000/HISTFILESIZE=/g' ~/.bashrc
-
-# - name: 4.Copy Vimrc
-#   copy: 
-#     src: .vimrc
-#     dest: /home/vagrant/.vimrc
-#   tags: once
