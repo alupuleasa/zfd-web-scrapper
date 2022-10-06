@@ -1,0 +1,10 @@
+---
+# created by Andrei Lupuleasa, December 2018.
+ - name: Ubuntu 20.04
+   hosts: all
+   roles:
+    - init
+    - go
+    - docker
+    - kubernetes
+    - nginx

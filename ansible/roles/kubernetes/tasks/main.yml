@@ -1,0 +1,8 @@
+- name: 1.Transfer shell script
+  copy: src: install_helm.sh dest=~/install_helm.sh mode=0777
+  tags: once
+
+- name: 2.Execute shell script
+  become: true
+  command: sh install_helm.sh
+  tags: once
